@@ -1,0 +1,25 @@
+travel_log = []
+
+session_on = True
+while session_on == True:
+  place = input("Where did you visit? ")
+  towns = input("Which cities did you visit? ")
+  amount = input("How many times did you visit? ")
+  
+  def add_new_country(country_visited, cities_visited, times_visited):
+    new_country = {}
+    new_country["country"] = country_visited
+    new_country["cities"] = cities_visited
+    new_country["times"] = times_visited
+    travel_log.append(new_country)
+  
+  add_new_country(country_visited=place, cities_visited=towns, times_visited=amount)
+  apply = input("Do you still want to add another places? Y or N ")
+  if apply == "Y":
+    session_on = True
+  else:
+    session_on = False
+
+print(travel_log)
+
+
